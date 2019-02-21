@@ -61,7 +61,7 @@ function main() {
   // Initial call to load scene
   loadScene();
 
-  const camera = new Camera(vec3.fromValues(0, 0, -10), vec3.fromValues(0, 0, 0));
+  const camera = new Camera(vec3.fromValues(0, 8, -13), vec3.fromValues(0, 5, 0));
 
   const renderer = new OpenGLRenderer(canvas);
   renderer.setClearColor(164.0 / 255.0, 233.0 / 255.0, 1.0, 1);
@@ -75,7 +75,6 @@ function main() {
   function processKeyPresses() {
     // Use this if you wish
   }
-
   // This function will be called every frame
   function tick() {
     camera.update();
