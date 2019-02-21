@@ -336,10 +336,12 @@ float scene(vec3 pos){
     float d = 1e10;
     float cylinder1 = repeatxz(pos,vec2(13.f,13.f));
     float boat = Sphere(pos-getld()+vec3(0.f,.5f,0.f),1.2f);
+    float cy2 = Cylinder(pos-getld()+vec3(0.f,0.3f,0.f),0.02f,.25f);
     float plane = Plane(-pos,vec4(0.f,1.f,0.f,23.f));
     d = min(d,cylinder1);
     d = min(d,boat);
     d = min(d,plane);
+    d = min(d,cy2);
     //float plane = Plane(pos,vec4(0.0,1.0,0.0,2.f));
     //d = min(d,plane);
     return d;
@@ -577,7 +579,7 @@ vec3 rendert(in vec3 ro, in vec3 rd, in float t, inout float selft){
         vec3 rfl = normalize(reflect(rd,-nor));
         vec3 ldi = normalize(getld()-curp);
         float vv = dot(rfl,ldi);
-        if(vv>0.999){
+        if(vv>0.99999){
                 return lcol+vec3(0.f,0.7,0.3);
 
         }
