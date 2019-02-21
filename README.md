@@ -29,11 +29,11 @@ surface, by cauculating water's normal at that point and using glsl's reflect fu
 new origin, and reflect direction as ray direction, input this ray into the geometry pass's render function, and finally get the correct reflected color.
 notice that the rflected result is able to track the movement of shadow on the pillar, since there are two seperate render pass.
 - domain repetition: geometry of the pillar is created as follows :
- - first generate two long boxes streching in the y dimension, make one of them rotate 45 degree, and then get intersect of the two to create a octagonal pillar base shape,
- - next I used several Hexagonal Prism - exact(from IQ) to get repetetive decorations at the bottom,
- - then use the same sdf of the decoration at the bottom, copy another one, scale it down, move upwards.
- - mirror the entire geometry
- - use domain repetition throung moding the xz value of current point
+  - first generate two long boxes streching in the y dimension, make one of them rotate 45 degree, and then get intersect of the two to create a octagonal pillar base shape,
+  - next I used several Hexagonal Prism - exact(from IQ) to get repetetive decorations at the bottom,
+  - then use the same sdf of the decoration at the bottom, copy another one, scale it down, move upwards.
+  - mirror the entire geometry
+  - use domain repetition throung moding the xz value of current point
  
  ## References:
  - IQ soft penumbra shaow, and sdf funtions
